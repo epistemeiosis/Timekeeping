@@ -1,0 +1,14 @@
+%table
+  %tr
+    %th Task
+    %th controls
+  - @tasks.each do |task|
+    %tr
+      %td=task[:name]
+      %td delete button here
+  %tr
+    %td
+      %a{:href => '/new'} New Task
+    %td
+
+Total time: 0
