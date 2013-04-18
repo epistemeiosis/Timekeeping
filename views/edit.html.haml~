@@ -1,0 +1,22 @@
+-#can use @task! 
+
+-#%form{:method => 'POST', :action => '/new'}
+  -#%input{:type => 'text', :name => 'name'}
+  -#%input{:type => 'submit'}
+  
+from: http://stackoverflow.com/questions/9769024/how-to-update-or-insert-on-sequel-dataset 
+
+  rec = $nums.where(:number => n, :type => t)
+  if $nums.select(1).where(rec.exists)
+    rec.update(:counter => :counter + 1)
+  else
+    $nums.insert(:number => n, :counter => 1, :type => t)
+  end" 
+  
+  
+
+%form{:method => 'POST', :action => '/update'}
+  %input{:type => 'text', } 
+  
+render a form containing the info one wants to update
+submit form, should post to an action w/ updated data and commit to database

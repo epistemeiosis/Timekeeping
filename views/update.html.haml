@@ -1,0 +1,12 @@
+-#can use @task! 
+
+%form{:method => 'POST', :action => '/update/'+ @task[:id].to_s}
+  %input{:type => 'text', :name => 'name', :value => @task[:name]}
+  %input{:type => 'text', :name => 'start_at', :value => @task[:start_at]}
+  %input{:type => 'submit'}
+  
+render a form containing the info one wants to update
+submit form, should post to an action w/ updated data and commit to database
+
+
+-# 
