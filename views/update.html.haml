@@ -2,7 +2,9 @@
 
 %form{:method => 'POST', :action => '/update/'+ @task[:id].to_s}
   %input{:type => 'text', :name => 'name', :value => @task[:name]}
+  -#%input{:type => 'text', :name => 'task', :value => @task[:task]}
   %input{:type => 'text', :name => 'start_at', :value => @task[:start_at]}
+  %input{:type => 'text', :name => 'end_at', :value => @task[:end_at]}
   %input{:type => 'submit'}
   
 render a form containing the info one wants to update

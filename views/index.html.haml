@@ -9,16 +9,17 @@
     %tr
       %td=task[:name]
       %td=task[:start_at]
-      %td
+      %td=task[:end_at]
       %td
         =task[:id]
       %td 
         %a{:href => '/update/' + task[:id].to_s} Update
         %a{:href => '/delete/' + task[:id].to_s} Delete 
+        %a{:href => '/end/' + task[:id].to_s} End
       %td
   %tr
     %td
-      %a{:href => '/new'} Input
-    %td
-
-Total time: 0
+      %a{:href => '/new'} Start
+    %td= total(@tasks)
+    
+     
